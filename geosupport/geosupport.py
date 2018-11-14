@@ -54,7 +54,7 @@ class Geosupport(object):
                     self.geolib = cdll.LoadLibrary("NYCGEO.dll")
                 else:
                     self.geolib = windll.LoadLibrary("NYCGEO.dll")
-            elif self.platform.startswith('linux'):
+            elif self.platform in ['linux', 'darwin']:
                 from ctypes import cdll
 
                 if GEOLIB is not None:
