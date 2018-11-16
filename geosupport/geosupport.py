@@ -28,7 +28,7 @@ class Geosupport(object):
             geosupport_path = versions[geosupport_version.lower()]
 
         if geosupport_path is not None:
-            if self.platform.startswith('linux'):
+            if self.platform in ['linux', 'darwin']:
                 raise GeosupportError(
                     "geosupport_path and geosupport_version not valid with "
                     "linux. You must set LD_LIBRARY_PATH and GEOFILES "
